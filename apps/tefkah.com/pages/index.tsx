@@ -65,23 +65,23 @@ export const Index = (props: IndexProps) => {
         </motion.div>
       </div>
       <motion.div
-        className="flex flex-col md:flex-row gap-8 text-lg text-gr items-center font-semibold text-cool"
+        className="flex flex-col md:flex-row gap-8 text-lg text-gr items-center font-semibold text-red-50"
         initial={{ opacity: 0, transform: 'translate(0px,20px)' }}
         animate={{ opacity: 1, transform: 'translate(0px,0px)' }}
         transition={{ delay: 3, stiffness: 50, duration: 0.8, easings: 'easeOut' }}
       >
         <Link href="#" passHref>
-          <motion.a whileHover={{ y: -4 }} className="dark:white text-2xl">
+          <motion.a whileHover={{ y: -4 }} className="dark:text-white text-2xl">
             Portfolio
           </motion.a>
         </Link>
         <Link href="https://thesis.tefkah.com" passHref>
-          <motion.a whileHover={{ y: -4 }} className="dark:white text-2xl">
+          <motion.a whileHover={{ y: -4 }} className="dark:text-white text-2xl">
             Thesis
           </motion.a>
         </Link>
         <Link href="/blog" passHref>
-          <motion.a whileHover={{ y: -4 }} className="dark:white text-2xl">
+          <motion.a whileHover={{ y: -4 }} className="dark:text-white text-2xl">
             Blog
           </motion.a>
         </Link>

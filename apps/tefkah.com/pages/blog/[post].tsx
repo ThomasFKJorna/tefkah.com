@@ -20,13 +20,18 @@ export const PostPage = (props: PostPageProps) => {
   // }
 
   return (
-    <div className="w-[100vw]  bg-gradient-to-b from-moon to-blood flex flex-col item-center justify-center gap-20">
-      <nav className="text-onyx p-4 text-3xl font-bold">
+    <div className="w-[100vw] dark:bg-gradient-to-b dark:from-slate-800 dark:to-onyx  bg-gradient-to-b from-moon to-blood flex flex-col item-center justify-center gap-20">
+      <nav className="sticky top-0 text-onyx p-4 text-3xl font-bold">
         <Link href="/" passHref>
-          <motion.a whileHover={{ scale: 1.5 }}>tefkah.</motion.a>
+          <motion.a
+            whileHover={{ scale: 1.5 }}
+            className="dark:text-cool transition-colors dark:hover:text-ice hover:text-blood-900  text-onyx"
+          >
+            tefkah.
+          </motion.a>
         </Link>
       </nav>
-      <article className="prose w-[40ch] md:w-[70ch] mx-auto">
+      <article className="prose dark:prose-invert w-[40ch] min-h-[100vh] md:w-[70ch] mx-auto">
         <MDXRemote {...mdxSource} />
       </article>
 

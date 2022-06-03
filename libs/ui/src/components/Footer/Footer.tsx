@@ -14,7 +14,7 @@ export const Footer = (props: FooterProps) => {
   const { socials, license, name } = props
   return (
     <footer>
-      <div className="flex flex-col-reverse mb-4 md:mb-0 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex-row items-center md:items-center md:justify-between lg:px-8">
+      <div className="dark:text-cool flex flex-col-reverse mb-4 md:mb-0 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex-row items-center md:items-center md:justify-between lg:px-8">
         <div className="my-8 md:my-0 md:order-1">
           <p className="flex items-center text-center text-base  gap-2">
             &copy; {format(new Date(), 'yyyy')} {name}.{' '}
@@ -27,7 +27,7 @@ export const Footer = (props: FooterProps) => {
         </div>
         <div className="flex justify-center gap-4 md:order-2 sm:pb-2">
           {socials.map((item) => (
-            <a key={item.name} href={item.href} className="hover:text-gray-500">
+            <a key={item.name} href={item.href} className="hover:text-gray-500 dark:hover:text-ice">
               <span className="sr-only">{item.name}</span>
               <span className="h-6 w-6" aria-hidden="true">
                 <FooterIcon className="h-6 w-6" name={item.name} />
