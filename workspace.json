@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "tefkah.com": "apps/tefkah.com",
-    "tefkah.com-e2e": "apps/tefkah.com-e2e"
+    "tefkah.com-e2e": "apps/tefkah.com-e2e",
+    "ui": "libs/ui"
   }
 }

@@ -15,7 +15,10 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "rules": {},
+      "parserOptions": {
+        "project": ["apps/tefkah.com/tsconfig.json"]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
