@@ -30,8 +30,8 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "ui": ["libs/ui/src/index.ts"],
-      "tefkah": ["apps/tefkah.com"]
+      "tefkah": ["apps/tefkah.com"],
+      "ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -5,8 +5,8 @@ const { join } = require('path')
 module.exports = {
   presets: [require('../../tailwind-workspace-preset.js')],
   content: [
-    join(__dirname, 'components/**/*!(*.stories|*.spec).{ts,tsx,html}'),
-    join(__dirname, 'pages/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+    join(__dirname, 'src/components/**/*.{ts,tsx,html}'),
+    join(__dirname, 'src/lib/**/*.{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
