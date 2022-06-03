@@ -14,20 +14,6 @@
     },
     ".eslintrc.json": "*"
   },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken": "MGEyZTQ2YWEtNWE5My00NDNlLThhMDgtMzYyMDFiNDhhM2M4fHJlYWQtd3JpdGU="
-      }
-    }
-  },
   "targetDependencies": {
     "build": [
       {
