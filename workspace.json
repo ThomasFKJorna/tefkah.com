@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "tefkah.com": "apps/tefkah.com",
+    "tefkah.com-e2e": "apps/tefkah.com-e2e"
+  }
+}
