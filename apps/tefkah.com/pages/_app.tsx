@@ -18,7 +18,7 @@ const CustomApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   return getLayout(
     <>
       <Head>
-        <title>Welcome to tefkah.com!</title>
+        <title>tefkah.</title>
       </Head>
       <main className="app">
         <Component {...pageProps} />

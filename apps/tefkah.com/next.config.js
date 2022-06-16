@@ -5,6 +5,7 @@ const withNx = require('@nrwl/next/plugins/with-nx')
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
+  swcMinify: true,
   experimental: {
     runtime: 'nodejs',
     serverComponents: true,

@@ -1,3 +1,5 @@
+export * from './components/Logo'
+export * from './components/Hero'
 export * from './components/LicenseIcon'
 export * from './components/FooterIcon'
 export * from './components/Footer'

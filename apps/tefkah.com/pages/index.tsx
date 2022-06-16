@@ -1,26 +1,11 @@
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FooterProps } from 'ui'
+import { FooterProps, Hero, Logo } from 'ui'
 import { BasicLayout } from '../layouts/BasicLayout'
 import { getFooterProps } from '../utils/getFooterProps'
 
 export interface IndexProps {
   footer: FooterProps
-}
-const container: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delayChildren: 1,
-      staggerChildren: 0.8,
-      staggerDirection: 1,
-    },
-  },
-}
-const item: Variants = {
-  hidden: { opacity: 0, scale: 2 },
-  show: { opacity: 1, scale: 1 },
 }
 export const Index = (props: IndexProps) => {
   const { footer } = props
@@ -32,37 +17,8 @@ export const Index = (props: IndexProps) => {
 
   return (
     <BasicLayout footer={footer}>
-      {/* <main className="dark:bg-slate-800 bg-red-500 w-[100vw] h-[100vh] flex items-center justify-center flex-col gap-10"> */}
       <div className="relative">
-        {/* <h1 className="absolute top-2 left-6 font-extrabold text-9xl text-slate-800 dark:text-white backdrop-blur-sm">
-          tefkah.
-        </h1> */}
-        <motion.div
-          className="relative font-extrabold text-9xl  dark:text-white flex "
-          variants={container}
-          // whileHover={{ scale: 1.2 }}
-          initial="hidden"
-          animate="show"
-        >
-          <motion.h1
-            className="bg-clip-text bg-gradient-to-tr from-cool to-cool text-transparent"
-            variants={item}
-            transition={{ opacity: [0, 1, 1], scale: [0, 0, 1], duration: 0.2 }}
-            style={{ originX: 0.5 }}
-            // transition={{ delay: 0.5 }}
-          >
-            <span>tef</span>
-          </motion.h1>
-          <motion.h1
-            className="text-transparent bg-clip-text bg-gradient-to-br from-cool  to-moon"
-            variants={item}
-            transition={{ opacity: [0, 1, 1], scale: [0, 0, 1], duration: 0.2 }}
-            style={{ originX: -0.5 }}
-            // transition={{ delay: 1 }}
-          >
-            <span>kah.</span>
-          </motion.h1>
-        </motion.div>
+        <Logo />
       </div>
       <motion.div
         className="flex flex-col md:flex-row gap-8 text-lg text-gr items-center font-semibold text-red-50"
