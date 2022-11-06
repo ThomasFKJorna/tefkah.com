@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  :root {
+    --color-primary: 349deg 100% 50%;
+    --color-secondary: 260deg 100% 5%;
+  }
+}
