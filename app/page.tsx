@@ -1,11 +1,9 @@
 // import { BlackoutTwoAM } from './layout';
 // import { Octokit } from '@octokit/rest'
 
-export const revalidate = 600 // revalidate this page every 60 seconds
+// export const revalidate = 600 // revalidate this page every 60 seconds
 
-const Page = async () => {
-  // const text = await getMarkdown()
-
+export default async function Page() {
   return (
     <main className="min-h-screen bg-primary w-screen overflow-clip justify-center flex flex-col items-center ">
       <div className="h-screen flex flex-col items-center justify-center">
@@ -19,5 +17,3 @@ const Page = async () => {
     </main>
   )
 }
-
-export default Page

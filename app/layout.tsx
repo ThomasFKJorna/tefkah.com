@@ -19,35 +19,35 @@ const humane = localFont({
   variable: '--humane',
 })
 
-const RootLayout = async ({ children }: { children: React.ReactNode }) => (
-  <html lang="en" className={`${humane.variable} `}>
-    <head />
-    <body className="w-screen">
-      {/* <AuthContext> */}
-      {/* <Nav /> */}
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${humane.variable} `}>
+      <head />
+      <body className="w-screen">
+        {/* <AuthContext> */}
+        {/* <Nav /> */}
 
-      {children}
-      {/* <Footer /> */}
-      {/* </AuthContext> */}
-      <footer className="bg-secondary text-primary h-52">
-        <div className="flex gap-10 items-center h-full justify-center">
-          <a href="https://github.com/tefkah">
-            <span className="sr-only">GitHub</span>
-            <FaGithub className="h-8 w-8" />
-          </a>
-          <a href="https://twitter.com/tefkah">
-            <span className="sr-only">Twitter</span>
-            <FaTwitter className="h-8 w-8" />
-          </a>
-          <a href="https://www.linkedin.com/in/thomasfkjorna/">
-            <span className="sr-only">LinkedIn</span>
-            <FaLinkedin className="h-8 w-8" />
-          </a>
-          <EmailButton email="hello@tefkah.com" />
-        </div>
-      </footer>
-    </body>
-  </html>
-)
-
-export default RootLayout
+        {children}
+        {/* <Footer /> */}
+        {/* </AuthContext> */}
+        <footer className="bg-secondary text-primary h-52">
+          <div className="flex gap-10 items-center h-full justify-center">
+            <a href="https://github.com/tefkah">
+              <span className="sr-only">GitHub</span>
+              <FaGithub className="h-8 w-8" />
+            </a>
+            <a href="https://twitter.com/tefkah">
+              <span className="sr-only">Twitter</span>
+              <FaTwitter className="h-8 w-8" />
+            </a>
+            <a href="https://www.linkedin.com/in/thomasfkjorna/">
+              <span className="sr-only">LinkedIn</span>
+              <FaLinkedin className="h-8 w-8" />
+            </a>
+            <EmailButton email="hello@tefkah.com" />
+          </div>
+        </footer>
+      </body>
+    </html>
+  )
+}
