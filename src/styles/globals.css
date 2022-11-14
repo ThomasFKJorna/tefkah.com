@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --color-primary: 349deg 100% 50%;
-    --color-secondary: 260deg 100% 5%;
+    --color-secondary: 344deg 100% 65%;
+    --color-primary: 250deg 100% 15%;
   }
 }

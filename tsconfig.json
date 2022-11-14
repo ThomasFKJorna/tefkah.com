@@ -9,10 +9,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "incremental": true,
-    "types": [
-      "jest",
-      "node"
-    ],
+    "types": ["jest", "node"],
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
@@ -23,11 +20,7 @@
       }
     ],
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true
   },
   "include": [
@@ -40,7 +33,5 @@
     "jest.config.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

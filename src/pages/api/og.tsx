@@ -1,24 +1,20 @@
-import { ImageResponse } from '@vercel/og';
-import { NextRequest } from 'next/server';
+import { ImageResponse } from '@vercel/og'
+import { NextRequest } from 'next/server'
 
 export const config = {
   runtime: 'experimental-edge',
-};
+}
 
-const font = fetch(
-  new URL('../../assets/fonts/Humane-Bold.ttf', import.meta.url)
-).then((res) => res.arrayBuffer());
+const font = fetch(new URL('../../assets/fonts/Humane-Bold.ttf', import.meta.url)).then((res) => res.arrayBuffer())
 
 const handler = async (req: NextRequest) => {
-  const fontData = await font;
+  const fontData = await font
   try {
-    const { searchParams } = new URL(req.url);
+    const { searchParams } = new URL(req.url)
 
     // ?title=<title>
-    const hasTitle = searchParams.has('title');
-    const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
-      : 'tefkah.com';
+    const hasTitle = searchParams.has('title')
+    const title = searchParams.get('title')?.slice(0, 100) ?? 'tefkah.com'
 
     return new ImageResponse(
       (
@@ -45,13 +41,13 @@ const handler = async (req: NextRequest) => {
           },
         ],
         emoji: 'blobmoji',
-      }
-    );
+      },
+    )
   } catch (e: any) {
-    console.log(`${e.message}`);
-    return new Response(`Failed to generate the image`, {
+    console.log(`${e.message}`)
+    return new Response('Failed to generate the image', {
       status: 500,
-    });
+    })
   }
-};
-export default handler;
+}
+export default handler

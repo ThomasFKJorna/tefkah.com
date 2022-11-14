@@ -5,8 +5,7 @@ const Head = async ({
     note: string | string[]
   }
 }) => {
-  const currentNote =
-    typeof params.note === 'string' ? params.note : params.note?.join('/') ?? 'index'
+  const currentNote = typeof params.note === 'string' ? params.note : params.note?.join('/') ?? 'index'
   return (
     <>
       <title>{currentNote}</title>
@@ -14,9 +13,9 @@ const Head = async ({
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
-        content={`${
-          process.env.VERCEL_URL ?? process.env.NEXT_PUBLIC_BASE_URL
-        }/api/og?title=${encodeURIComponent(currentNote)}`}
+        content={`${process.env.VERCEL_URL ?? process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${encodeURIComponent(
+          currentNote,
+        )}`}
       />
     </>
   )

@@ -1,8 +1,8 @@
-import '../styles/globals.css';
+import '../styles/globals.css'
 // import 'katex/dist/katex.css'
-import localFont from '@next/font/local';
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { EmailButton } from './EmailButton';
+import localFont from '@next/font/local'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { EmailButton } from './EmailButton'
 
 // export const BlackoutTwoAM = localFont({
 //   src: '../assets/fonts/Blackout-TwoAm-Mod.ttf',
@@ -17,7 +17,7 @@ import { EmailButton } from './EmailButton';
 const humane = localFont({
   src: '../assets/fonts/Humane-VF.ttf',
   variable: '--humane',
-});
+})
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => (
   <html lang="en" className={`${humane.variable} `}>
@@ -48,6 +48,6 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => (
       </footer>
     </body>
   </html>
-);
+)
 
-export default RootLayout;
+export default RootLayout

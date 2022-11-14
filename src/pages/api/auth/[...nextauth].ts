@@ -29,18 +29,19 @@ export default NextAuth({
     async session(sesh) {
       const { session, user, token } = sesh
       // Send properties to the client, like an access_token from a provider.
+      // @ts-expect-error accessToken is not a property of session
       session.accessToken = token.accessToken
       return session
     },
-    async signIn({ user, account, profile, email, credentials }) {
-      const isAllowedToSignIn = env.ALLOWED_EMAILS?.split(',').includes(user?.email as string)
-      if (isAllowedToSignIn) {
-        return true
-      }
-      // Return false to display a default error message
-      return false
-      // Or you can return a URL to redirect to:
-      // return '/unauthorized'
-    },
+    // async signIn({ user, account, profile, email, credentials }) {
+    //   // const isAllowedToSignIn = env.ALLOWED_EMAILS?.split(',').includes(user?.email as string)
+    //   // if (isAllowedToSignIn) {
+    //   //   return true
+    //   // }
+    //   // Return false to display a default error message
+    //   return true
+    //   // Or you can return a URL to redirect to:
+    //   // return '/unauthorized'
+    // },
   },
 })
