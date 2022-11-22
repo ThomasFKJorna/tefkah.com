@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import localFont from '@next/font/local'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { EmailButton } from './EmailButton'
+import { AnalyticsWrapper } from './(components)/Analytics'
 
 // export const BlackoutTwoAM = localFont({
 //   src: '../assets/fonts/Blackout-TwoAm-Mod.ttf',
@@ -47,6 +48,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <EmailButton email="hello@tefkah.com" />
           </div>
         </footer>
+        <AnalyticsWrapper />
       </body>
     </html>
   )

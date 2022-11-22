@@ -7,6 +7,7 @@ specifiers:
   '@types/jest': ^29.2.2
   '@types/node': ^18.11.9
   '@types/react': ^18.0.25
+  '@vercel/analytics': ^0.1.5
   '@vercel/og': ^0.0.20
   autoprefixer: ^10.4.13
   eslint: ^8.27.0
@@ -27,6 +28,7 @@ specifiers:
 dependencies:
   '@next/font': 13.0.2
   '@octokit/rest': 19.0.5
+  '@vercel/analytics': 0.1.5_react@18.2.0
   '@vercel/og': 0.0.20
   framer-motion: 7.6.6_biqbaboplfbrettd7655fr4n2y
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
@@ -1255,6 +1257,14 @@ packages:
 
   /@types/yoga-layout/1.9.2:
     resolution: {integrity: sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw==}
+    dev: false
+
+  /@vercel/analytics/0.1.5_react@18.2.0:
+    resolution: {integrity: sha512-/k9N8Ea3Yc5A52GlkjzUEbi2vE/izClrOf++ryBkxEfrZM/OZwtHkdNw/QExZ1h/B67RCZLK7bCOnKKrhG7gTg==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@vercel/og/0.0.20:

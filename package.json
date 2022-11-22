@@ -6,7 +6,7 @@
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -30,6 +30,7 @@
   "dependencies": {
     "@next/font": "^13.0.2",
     "@octokit/rest": "^19.0.5",
+    "@vercel/analytics": "^0.1.5",
     "@vercel/og": "^0.0.20",
     "framer-motion": "^7.6.6",
     "next": "13.0.2",
